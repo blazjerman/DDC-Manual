@@ -3,7 +3,6 @@ layout: home
 title: Discrete Digital Clock Manual
 ---
 
-# 🕒 Discrete Digital Clock Manual
 
 ---
 
@@ -33,7 +32,6 @@ There are other similar digital clock kits online, often sold in THT form, but t
 
 You can mount this clock on a wall using the four included 3M screws, which can be attached to a wooden plate or other surface and then hung.
 
-
 ---
 
 ## 🖼️ Preview
@@ -50,13 +48,23 @@ Below is a detailed description of each chamber.
 
 ### Power Supply
 
+*Description coming soon...*
+
 ### Seconds
+
+*Description coming soon...*
 
 ### Hours / Minutes
 
+*Description coming soon...*
+
 ### Decoder
 
+*Description coming soon...*
+
 ### Multiplexer
+
+*Description coming soon...*
 
 ---
 
@@ -80,7 +88,6 @@ For the low-voltage version, you need a **6V AC transformer** capable of supplyi
 
 A **0.5A fuse** is pre-installed for this version as well.
 
-
 ---
 
 ## 🛠️ How to Use
@@ -95,13 +102,8 @@ You can set the time using the following buttons:
 
 To set the seconds accurately, press the **Reset** button and release it **exactly at 0 seconds** (e.g., using another clock or stopwatch as reference).
 
-
-
 ---
 
 ## 📩 Contact
 
-
-
 ---
-
