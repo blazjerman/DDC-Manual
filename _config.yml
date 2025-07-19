@@ -1,3 +1,3 @@
-theme: minima
 title: Discrete Digital Clock Manual
 description: Documentation and showcase of the Discrete Digital Clock
+theme: jekyll-theme-cayman
