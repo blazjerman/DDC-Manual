@@ -4,8 +4,6 @@ title: Detailed Overview
 permalink: /detailed/
 ---
 
-## Detailed Overview
-
 The clock includes many LED indicators to show how the system works (details about LED functions are provided below). The indicator LEDs operate at low current to increase their lifespan—most run at 2 mA, except for the display LEDs, which are driven at around 15 mA due to multiplexing and their lower brightness.
 
 All other components on the board are high quality. All ceramic capacitors are C0G type from Murata Electronics, and the transistors and diodes are sourced from ON Semiconductor.
@@ -23,8 +21,8 @@ You can find the full schematic of the clock here:
 
 Below is a detailed description of each chamber.
 
-<details>
-<summary>Power Supply</summary>
+
+### Power Supply
 
 ![Clock psu](images/power_suply.png)
 
@@ -34,32 +32,16 @@ The transformer output is then rectified and regulated down to 6V using a low-vo
 
 On the right side, there is a Schmitt trigger comparator that receives the mains frequency signal and filters out unwanted noise that may come from other devices on the same power network. There is also an LED indicator labeled R296 (marked "CS" on the board), which blinks at the mains frequency.
 
-</details>
 
-<details>
-<summary>Seconds</summary>
-
+### Seconds
 *Description coming soon...*
 
-</details>
-
-<details>
-<summary>Hours / Minutes</summary>
-
+### Hours / Minutes
 *Description coming soon...*
 
-</details>
-
-<details>
-<summary>Decoder</summary>
-
+### Decoder
 *Description coming soon...*
 
-</details>
-
-<details>
-<summary>Multiplexer</summary>
-
+### Multiplexer
 *Description coming soon...*
 
-</details>

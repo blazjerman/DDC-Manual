@@ -34,7 +34,7 @@ You can mount this clock on a wall using the four included 3M screws, which can 
 ![Clock Render](images/render_top.png)  
 *Rendered image of the Discrete Digital Clock*
 
-For a more detailed preview of the clock internals, see the [Detailed Overview](/detailed/).
+For a more detailed preview of the clock internals, see the [Detailed Overview](detailed.md).
 
 ---
 
