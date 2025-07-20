@@ -58,9 +58,9 @@ Below is a detailed description of each chamber.
 > Click on each title below to expand and see more details.
 
 <details>
-<summary> Power Supply</summary>
+<summary>Power Supply</summary>
 
-![Clock Render](images/power_suply.png)
+![Clock psu](images/power_suply.png)
 
 The power supply takes mains AC and converts it to a lower 6V using a transformer. A fuse is included on the primary side for safety. If a socket transformer is used, you should install a 1A fuse and short transformer pins 1 to 7 and 5 to 9. This allows you to connect the low-voltage wires from the socket to the top-right connector.
 
@@ -71,28 +71,28 @@ On the right side, there is a Schmitt trigger comparator that receives the mains
 </details>
 
 <details>
-<summary> Seconds</summary>
+<summary>Seconds</summary>
 
 *Description coming soon...*
 
 </details>
 
 <details>
-<summary> Hours / Minutes</summary>
+<summary>Hours / Minutes</summary>
 
 *Description coming soon...*
 
 </details>
 
 <details>
-<summary> Decoder</summary>
+<summary>Decoder</summary>
 
 *Description coming soon...*
 
 </details>
 
 <details>
-<summary> Multiplexer</summary>
+<summary>Multiplexer</summary>
 
 *Description coming soon...*
 
