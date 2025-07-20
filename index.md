@@ -22,7 +22,7 @@ This project started during the COVID lockdowns, when I had a lot of free time a
 
 The clock’s precision depends on your local electric grid frequency, and is usually accurate to within ±20 seconds per year. Since it relies on mains frequency, it resets when the power goes out. This approach simplifies the design and reduces the component count. The fewer the components, the fewer things that can fail over time.
 
-The clock is built on an X × X cm PCB that contains all necessary components. Surface-mount (SMD) components are used to reduce soldering time and manufacturing cost. While it would definitely look cooler with through-hole (THT) parts, that would double the size and take much longer to assemble.
+The clock is built on an 243 × 147 mm PCB that contains all necessary components. Surface-mount (SMD) components are used to reduce soldering time and manufacturing cost. While it would definitely look cooler with through-hole (THT) parts, that would double the size and take much longer to assemble.
 
 The default version supports 220V 50Hz input. There is also an option without a transformer, allowing you to solder your own for other voltages and frequencies (check the [Installation](#installation) section).  
 If you're not comfortable working with mains voltage, you can use a socket transformer instead.
@@ -97,6 +97,16 @@ The transformer must be rated for **6V AC** and capable of supplying at least **
 It’s recommended to use a **60mA fuse on the primary side** for 110V, or a **1A fuse on the secondary side**.
 
 You also need to add resistors to the bottom counters of the minutes section to set the correct frequency.
+
+---
+
+### Size
+
+The PCB measures **243 × 147 mm** and features **M3 mounting holes** for easy installation in enclosures or setups.
+
+Below is a dimensioned drawing showing the main sizes of the PCB:
+
+![Dimensioned Drawing of PCB](images/size.png)
 
 ---
 
