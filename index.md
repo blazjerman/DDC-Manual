@@ -8,9 +8,7 @@ title: Discrete Digital Clock Manual
 
 ## Overview
 
-This clock is an enlarged version of a TTL logic IC, designed entirely from discrete components. It’s a cool way to see what’s inside a typical clock counter IC. The design is optimized for discrete components and extremely simplified to use a relatively small number of parts.
-
-**TTL (Transistor-Transistor Logic)** is a type of digital logic built using bipolar junction transistors. It was the standard technology used in early digital circuits before modern integrated circuits became common.
+This clock is an enlarged version of logic IC, designed entirely from discrete components. It’s a cool way to see what’s inside a typical clock counter IC. The design is optimized for discrete components and extremely simplified to use a relatively small number of parts.
 
 What makes this clock especially interesting is that it only uses **basic components**—transistors, resistors, diodes, and LEDs. No microcontrollers or ICs are involved. In fact, this clock could have been built as early as **1970**, using only the technology available at the time.
 
@@ -78,7 +76,7 @@ Below is a detailed description of each chamber.
 
 ## Installation
 
-⚠️ Installation is very straightforward, but **please exercise caution**, especially with the mains-powered version. ⚠️
+⚠️ Installation is straightforward, but **use caution**, especially when working with the mains-powered version. ⚠️
 
 ### 220V 50Hz Transformer Version
 
