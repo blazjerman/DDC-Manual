@@ -3,10 +3,6 @@ description: Documentation and showcase of the Discrete Digital Clock
 theme: minima
 
 header_pages:
-  - about.md
+  - detailed.md
   - buy.md
-
-markdown: kramdown
-kramdown:
-  input: GFM
-  parse_block_html: true
+  
