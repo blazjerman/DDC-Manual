@@ -29,7 +29,7 @@ If you're not comfortable working with mains voltage, you can use a socket trans
 
 There are other similar digital clock kits online, often sold in THT form, but they aren’t optimized for discrete components. This design uses around 800 components, while others typically use between 1200 and 1800. Links to similar projects are provided at the end.
 
-You can mount this clock on a wall using the four included 3M screws, which can be attached to a wooden plate or other surface and then hung.
+You can mount this clock on a wall using 3M screws, which can be attached to a wooden plate or other surface and then hung.
 
 ![Clock Render](images/render_top.png)  
 *Rendered image of the Discrete Digital Clock*
