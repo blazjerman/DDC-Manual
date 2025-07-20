@@ -51,26 +51,42 @@ You can find the full schematic of the clock here:
 
 Below is a detailed description of each chamber.
 
+> 💡 Click on each title below to expand and see more details.
 
-### Power Supply
-
-*Description coming soon...*
-
-### Seconds
+<details>
+<summary>### Power Supply</summary>
 
 *Description coming soon...*
 
-### Hours / Minutes
+</details>
+
+<details>
+<summary>### Seconds</summary>
 
 *Description coming soon...*
 
-### Decoder
+</details>
+
+<details>
+<summary>### Hours / Minutes</summary>
 
 *Description coming soon...*
 
-### Multiplexer
+</details>
+
+<details>
+<summary>### Decoder</summary>
 
 *Description coming soon...*
+
+</details>
+
+<details>
+<summary>### Multiplexer</summary>
+
+*Description coming soon...*
+
+</details>
 
 ---
 
