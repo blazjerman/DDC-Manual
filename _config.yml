@@ -5,3 +5,8 @@ theme: minima
 header_pages:
   - about.md
   - buy.md
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  parse_block_html: true
