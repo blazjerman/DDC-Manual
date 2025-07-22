@@ -4,6 +4,8 @@ title: Detailed Overview
 permalink: /detailed/
 ---
 
+This section provides a detailed explanation of the clock’s operation. It is recommended for users who already have a basic understanding of electronics and some knowledge of transistors.
+
 The clock includes many LED indicators to show how the system works (details about LED functions are provided below). The indicator LEDs operate at low current to increase their lifespan—most run at 2 mA, except for the display LEDs, which are driven at around 15 mA due to multiplexing and their lower brightness.
 
 All other components on the board are high quality. All ceramic capacitors are C0G type from Murata Electronics, and the transistors and diodes are sourced from ON Semiconductor.
@@ -71,8 +73,49 @@ When the clock is powered on, the flip-flop starts in the OFF state. It will rem
 LEDs D62 and D61 act as dividers between numbers. They remain off when the clock is in a state that requires a reset.
 
 ### Decoder
-*Description coming soon...*
+
+![Clock psu](images/decoder.png)
+
+The decoder’s purpose is to convert a binary number into the corresponding decimal digit and drive a 7-segment display accordingly. The binary input to the decoder is represented by LEDs labeled B0 to B3, which are connected to a 4-bit bus. The output can be seen on the display or on LEDs labeled A to G.
+
+This decoder is similar in concept to a typical diode matrix found in other projects but is designed differently and optimized for space. The lower diode matrix receives a 4-bit bus input. Normally, this type of matrix converts binary input into all possible output states. For decimal display, 10 states (0 to 9) are required, with only one output line active (high) at any given time.
+
+In standard designs, this output is usually inverted and passed to a second diode matrix to activate the correct segments of the display. In this design, inversion is not applied after the first matrix; instead, it is applied after the second diode matrix. This approach reduces both transistor and diode counts and avoids the voltage drop that would otherwise occur after the first matrix. The voltage drop is instead negated within the second matrix.
+
+Due to this change, the second matrix is inverted first, allowing for further reduction in diode count. Certain digit patterns also allowed for simplification, enabling the removal of some diodes entirely. Additionally, a few diodes that are not essential for full 10-state decoding were omitted. With all these optimizations, the overall component count was reduced by approximately 50 elements.
+
+Further simplification using transistor logic is possible, but this was avoided to maintain clarity and manageability of the design.
 
 ### Multiplexer
-*Description coming soon...*
+
+![Clock psu](images/multiplexer.png)
+
+The multiplexer controls which counter is connected to the decoder at any given moment, allowing the correct 7-segment display to be activated in a time-multiplexed manner. We have four 7-segment displays: two for hours and two for minutes. This means each display can be active for most 1/4 of the time.
+
+To cycle through the four display states, we can use a similar approach to the diode matrix used in the decoder, which involved two counters. However, due to the low number of states required, we can simplify this using just resistors.
+
+A clock signal is also needed to drive the multiplexer. For this, we use a simple bistable multivibrator oscillator running at approximately 300 Hz. It includes a potentiometer to adjust the duty cycle (on/off ratio), which allows us to control the brightness of the digits. The duty cycle can be set anywhere from 10% (dim) to 90% (bright).
+
+A manual switch (SW6, labeled "MAN") is also included to disable the multiplexer clock. In this mode, a button labeled "PULSE" (SW7) allows manual advancement of the multiplexer for testing purposes. LEDs labeled S0 to S3 indicate the current selected state, with S0 representing decimal seconds and S3 representing the ternary hour.
+
+This part is the biggest difference between this clock and other similar projects. Because of this, and the previously described optimizations, it uses significantly fewer components than the others.
+
+### Additional Connections
+
+This section provides a brief overview of the available expansion headers.
+
+At the bottom of the board, there are two headers reserved for connecting optional add-ons or custom modules.
+
+#### Left Header (J4 – 7 Pins)
+
+- **Pins 1–4:** A 4-bit bus, with the **least significant bit on the left**.  
+- **Pin 5:** A **reset-needed** signal, which goes high when the clock needs to be reset.  
+- **Pin 6:** **Power (6 V)**.  
+- **Pin 7:** **Ground**.
+
+#### Right Header – 4 Pins
+
+- **Pins 1–2:** A 2-bit binary value representing the current multiplexer state (i.e., which digit is selected).  
+- **Pin 3:** A **PWM signal**, which can be used for brightness control or other timing-based functions.  
+- **Pin 4:** **Ground**.
 
