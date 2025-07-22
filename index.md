@@ -97,7 +97,3 @@ These connectors can also be used to expand the clock’s functionality with fea
 You can also connect buttons to a microcontroller like an ESP32, so the clock can be automatically set up every time it resets.
 
 ---
-
-## 📩 Contact
-
----

@@ -1,6 +1,11 @@
 title: Discrete Digital Clock Manual
 description: Documentation and showcase of the Discrete Digital Clock
 theme: minima
+author: Blaž Jerman
+
+minima:
+  social_links:
+    github: blazjerman
 
 header_pages:
   - detailed.md
