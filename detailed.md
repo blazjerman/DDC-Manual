@@ -45,15 +45,30 @@ The reset counter is a simple pulse extender that outputs high when the input is
 
 The entire section consists of 12 counters and two reset counters. The first six counters, located at the bottom, convert the mains frequency into seconds. These counters are connected in series: the first receives a noise-free mains frequency signal from the power supply at its pulse input; each of the remaining five counters is connected via the negated output of the previous counter to its own pulse input. Each counter also has an LED that lights up when its STATE output is high, allowing us to visually read the binary value. This design makes the clock digital, with each counter representing one bit of a binary number—in this case, a 6-bit number, with the least significant bit on the right (FS0) and the most significant on the left (FS5). The binary value can be easily converted to decimal by reading the LEDs.
 
-A 6-bit counter can represent 64 values (0 to 63), but we need it to count only up to the mains frequency (e.g., 50Hz) in order to generate a 1-second pulse at the final counter. To achieve this, a reset counter resets the six counters once they reach a specific value. For example, if we want the counters to reset at 50 (binary 110010), we must detect that exact value and then pull all the reset inputs of the six counters high. The simplest way to detect this number is by using an OR logic gate on all the outputs that should be low at the reset point. This gate outputs high whenever the value is not the target, and low only when the exact reset value is reached. The resulting pulse is then inverted and extended by the reset counter to ensure a safe and reliable reset.
+A 6-bit counter can represent 64 values (0 to 63), but we need it to count only up to the mains frequency (e.g., 50Hz) in order to generate a 1-second pulse at the final counter. To achieve this, a reset counter resets the six counters once they reach a specific value. For example, if we want the counters to reset at 50 (binary 110010), we must detect that exact value and then pull all the reset inputs of the six counters high. The simplest way to detect this number is by using an OR logic gate on all the outputs that should be low at the reset point. This outputs high whenever the value is not the target, and low only when the exact reset value is reached. The resulting pulse is then inverted and extended by the reset counter to ensure a safe and reliable reset.
 
-This reset method has a minor issue: due to transistor delays, the reset value might briefly appear for a few nanoseconds. This is not visible to the naked eye but can be detected using a high-speed camera. The main advantage of this design is that the same reset signal can be used for all counters that need to reset at a specific value.
+This reset method has a minor issue: due to transistor delays, the reset value might briefly appear for a few nanoseconds. This is not visible to the naked eye but can be detected using a high-speed camera. The main advantage of this design is that the same reset logic can be used for all counters that need to reset at a specific value.
 
 The second group of six counters converts seconds into minutes. They function similarly to the first group, but are fixed to reset at 60 (binary 111100). Technically, with a 50Hz mains frequency, all 12 counters could be linked and reset together at a count of 300. However, this would make it difficult to visually convert the binary seconds into decimal using the LEDs from S0 to S5.
 
 
 ### Hours / Minutes
-*Description coming soon...*
+
+![Clock psu](images/hours_minutes.png)
+
+The hours and minutes parts of a clock work similarly to second counters, using the same method for resetting. The 24-hour digit has additional logic for resetting, but it still follows the same style as the other counter resets. Additionally, there is a block of logic called bus_enable which, when ENABLE is high, connects IN to OUT. OUT is then connected to the correct bit in a 4-bit bus.
+
+The bus is 4-bit and is used, with the help of a multiplexer and decoder, to convert each binary digit of the hours and minutes into decimal form for display. For simplicity, the bus uses an open-drain approach.
+
+There are also two increment counter logics for setting the minutes and hours. They function in the same way as the counter PULSE.
+
+![Clock psu](images/hours_minutes_reset.png)
+
+This part of the circuit is responsible for resetting all the clock counters. It will also trigger a reset if the voltage drops too low for the clock to operate properly.
+
+When the clock is powered on, the flip-flop starts in the OFF state. It will remain OFF until the RESET button (SW1) is pressed. Transistor Q5 ensures that once the button is pressed, the flip-flop stays in the OFF state even if the button is not released immediately. This allows the clock to be precisely reset, setting all counters to 0.
+
+LEDs D62 and D61 act as dividers between numbers. They remain off when the clock is in a state that requires a reset.
 
 ### Decoder
 *Description coming soon...*
