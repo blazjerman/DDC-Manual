@@ -1,4 +1,4 @@
-# Support and Purchase
+# Purchase
 
 ---
 
