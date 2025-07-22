@@ -154,4 +154,4 @@ The PCB is blue, 1.6 mm thick. All components, including the board, are RoHS-com
 | Potentiometer_THT| 250k         | Piher             | 1   |
 | Button_Switch_THT| Push         | Omron             | 4   |
 | Button_Switch_THT| N_CLOSED     | -                 | 1   |
-| Transformer_THT | 1P_1S         | Breve             | 1   |
+| Transformer_THT | 1P_1S         | HAHN              | 1   |

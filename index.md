@@ -8,11 +8,13 @@ title: Discrete Digital Clock Manual
 
 ## Overview
 
-This clock is an enlarged version of logic IC, designed entirely from discrete components. It’s a cool way to see what’s inside a typical clock counter IC. The design is optimized for discrete components and extremely simplified to use a relatively small number of parts.
+This clock is an enlarged version of a logic IC, designed entirely from discrete components. It’s a fascinating way to see what’s inside a typical clock counter IC. The design is optimized for discrete components and simplified to use a relatively small number of parts.
 
-What makes this clock especially interesting is that it only uses **basic components**—transistors, resistors, diodes, and LEDs. No microcontrollers or ICs are involved. In fact, this clock could have been built as early as **1970**, using only the technology available at the time.
+The clock has four 7-segment displays that show a 24-hour time format with minutes. It also includes indicator LEDs for all counters, allowing you to see the binary values of hours, minutes, and seconds.
 
-All components used are **high-quality and RoHS-compliant**, ensuring safety and durability. The **expected lifetime is extremely long** for nearly all parts—except for the **electrolytic capacitors**, which may eventually require replacement after many years. Fortunately, these are easy to identify and replace if needed.
+What makes this clock especially interesting is that it uses only basic components—transistors, resistors, diodes, and LEDs. No microcontrollers or integrated circuits are involved. In fact, this clock could have been built as early as 1970, using only the technology available at that time.
+
+All components used are **high-quality and RoHS-compliant**, ensuring safety and durability. The **expected lifetime is extremely long** for nearly all parts—except for the electrolytic capacitors, which may eventually require replacement after many years. Fortunately, these are easy to identify and replace if needed.
 
 Another major advantage of this design is **visibility**: thanks to the widespread use of LEDs throughout the circuit, problems are easy to spot and diagnose. If something fails, you can typically see exactly where the issue is and fix it quickly.
 
@@ -89,6 +91,10 @@ To set the seconds accurately, press the **Reset** button and release it **exact
 ---
 
 ## Connectivity / Add-ons
+
+
+![Clock Render](images/pcb.png)  
+*pcb*
 
 The clock has two connectors at the bottom that provide access to the time signal and PWM output for the display. You can refer to the pinout diagram above to identify each pin.
 
