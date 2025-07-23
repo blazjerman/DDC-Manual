@@ -93,9 +93,6 @@ To set the seconds accurately, press the **Reset** button and release it **exact
 ## Connectivity / Add-ons
 
 
-![Clock Render](images/pcb.png)  
-*pcb*
-
 The clock has two connectors at the bottom that provide access to the time signal and PWM output for the display. You can refer to the pinout diagram above to identify each pin.
 
 These connectors can also be used to expand the clock’s functionality with features such as an alarm, day/date/year display, stopwatch, and more.

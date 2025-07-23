@@ -121,23 +121,26 @@ At the bottom of the board, there are two headers reserved for connecting option
 
 ### Board and components
 
-The PCB is blue, 1.6 mm thick. All components, including the board, are RoHS-compliant and of good quality.
+![Clock Render](images/pcb.png)  
+*pcb*
+
+The PCB is blue, two-layered, and 1.6 mm thick. All components, including the board, are RoHS-compliant and of high quality. The back plate is made entirely of copper for shielding, except in areas with high voltage.
 
 #### Components List
 
 | Part Type       | Value         | Company           | Qty |
 |-----------------|---------------|-------------------|-----|
-| Capacitor_THT   | 470μ          | -                 | 1   |
+| Capacitor_THT   | 470μ          | Philips           | 1   |
 | Capacitor_SMD   | 220p          | Murata Electronics| 90  |
 | Capacitor_SMD   | 10n           | Murata Electronics| 4   |
 | Capacitor_SMD   | 0.1μ          | Murata Electronics| 10  |
-| Capacitor_THT   | 3300μ         | -                 | 1   |
+| Capacitor_THT   | 3300μ         | Philips           | 1   |
 | Diode_SMD       | 1N4148WS-7-F  | Diodes Incorporated|160 |
 | LED_SMD         | LED           | LiteOn            | 46  |
 | Diode_SMD       | S1A-13-F      | Diodes Incorporated|4   |
 | Diode_SMD       | 3V            | Diodes Incorporated|1   |
 | Fuse            | Fuse          | Schurter          | 1   |
-| 7 Segment Display| SA52-11EWA    | -                 | 4   |
+| 7 Segment Display| SA52-11EWA   | Kingbright        | 4   |
 | Transistor_SMD  | MMBT3904LT1G  | Onsemi            | 116 |
 | Transistor_SMD  | MMBT2907ALT1G | Onsemi            | 24  |
 | Transistor_THT  | BD140-16      | -                 | 1   |
