@@ -18,6 +18,9 @@ The clock board is divided into different chambers, each labeled by name and rep
 - Decoder  
 - Multiplexer  
 
+![Main schematic](images/main_schematic.png)
+
+
 You can find the full schematic of the clock here:  
 [📄 View Clock Schematic (PDF)](/files/scheme.pdf)
 
