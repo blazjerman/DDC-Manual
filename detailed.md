@@ -85,7 +85,7 @@ This decoder is similar in concept to a typical diode matrix found in other proj
 
 In standard designs, this output is usually inverted and passed to a second diode matrix to activate the correct segments of the display. In this design, inversion is not applied after the first matrix; instead, it is applied after the second diode matrix. This approach reduces both transistor and diode counts and avoids the voltage drop that would otherwise occur after the first matrix. The voltage drop is instead negated within the second matrix.
 
-Due to this change, the second matrix is inverted first, allowing for further reduction in diode count. Certain digit patterns also allowed for simplification, enabling the removal of some diodes entirely. Additionally, a few diodes that are not essential for full 10-state decoding were omitted. With all these optimizations, the overall component count was reduced by approximately 50 elements.
+Due to this change, the second matrix is inverted first, allowing for further reduction in diode count. Additionally, a few diodes that are not essential for full 10-state decoding were omitted. With all these optimizations, the overall component count was reduced by approximately 50 elements.
 
 Further simplification using transistor logic is possible, but this was avoided to maintain clarity and manageability of the design.
 
