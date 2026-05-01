@@ -10,7 +10,7 @@ This is the GitHub repository for my **DDC Manual**:
 
 ## 📖 About This Page
 
-This page serves as the official manual and visual guide for the DDC — a custom-built digital display clock. The DDC Manual provides technical details, images, and schematics related to the project.
+This page serves as the official manual and visual guide for the DDC — a custom-built discrete digital clock. The DDC Manual provides technical details, images, and schematics related to the project.
 
 Here you can:
 - Learn about the DDC’s design and functionality.
