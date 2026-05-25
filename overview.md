@@ -6,7 +6,7 @@ permalink: /overview/
 
 This section provides a simple explanation of how the clock operates. It is recommended for users who already have a basic understanding of electronics and some knowledge of transistors.
 
-The clock includes many LED indicators to show how the system works (details about LED functions are provided below). The indicator LEDs operate at low current to increase their lifespan—most run at 2 mA, except for the display LEDs, which are driven at around 15 mA due to multiplexing and their lower brightness.
+The clock includes many LED indicators to show how the system works (details about LED functions are provided below). The indicator LEDs operate at low current to increase their lifespan most run at 2 mA, except for the display LEDs, which are driven at around 15 mA due to multiplexing and their lower brightness.
 
 All other components on the board are high quality. All ceramic capacitors are C0G type from Murata Electronics, and the transistors and diodes are sourced from ON Semiconductor.
 
@@ -31,9 +31,9 @@ Below is a detailed description of each chamber.
 
 ![Clock psu](images/power_suply.png)
 
-The power supply takes mains AC and converts it to a lower 6V using a transformer. A fuse is included on the primary side for safety. If a socket transformer is used, you should install a 1A fuse and short transformer pins 1 to 7 and 5 to 9. This allows you to connect the low-voltage wires from the socket to the top-right connector.
+The power supply takes mains AC and converts it to a lower 6V using a transformer. A fuse is included on the primary side for safety. If a socket transformer is used, you should install a 1A fuse and short transformer pins 1 to 7 and 5 to 9. This allows you to connect the low voltage wires from the socket to the top right connector.
 
-The transformer output is then rectified and regulated down to 5V using a low-voltage drop-down regulator. This regulator includes a comparator that compares a reference voltage from a 3V Zener diode to control the output. A BD140 transistor is used for voltage regulation. This transistor is rated to dissipate 1.25W without a heat sink; while a heat sink can be added, it is not required in this case.
+The transformer output is then rectified and regulated down to 5V using a low voltage drop down regulator. This regulator includes a comparator that compares a reference voltage from a 3V Zener diode to control the output. A BD140 transistor is used for voltage regulation. This transistor is rated to dissipate 1.25W without a heat sink; while a heat sink can be added, it is not required in this case.
 
 On the right side, there is a Schmitt trigger comparator that receives the mains frequency signal and filters out unwanted noise that may come from other devices on the same power network. There is also an LED indicator (marked "FS" frequency source on the board), which blinks at the mains frequency.
 
@@ -44,15 +44,15 @@ On the right side, there is a Schmitt trigger comparator that receives the mains
 
 This part of the clock converts the mains frequency into seconds, and then into minutes. It is made up of counters and reset counters.
 
-Each counter is a toggle flip-flop with two output states: a normal STATE and its negation. It has a RESET input, which sets it to its initial state when high, and a PULSE input, which toggles its state on the falling edge of the pulse.
+Each counter is a toggle flip flop with two output states: a normal STATE and its negation. It has a RESET input, which sets it to its initial state when high, and a PULSE input, which toggles its state on the falling edge of the pulse.
 
 The reset counter is a simple pulse extender that outputs high when the input is low. It also includes a reset input that forces the output high, allowing the clock to be reset.
 
-The entire section consists of 12 counters and two reset counters. The first six counters, located at the bottom, convert the mains frequency into seconds. These counters are connected in series: the first receives a noise-free mains frequency signal from the power supply at its pulse input; each of the remaining five counters is connected via the negated output of the previous counter to its own pulse input. Each counter also has an LED that lights up when its STATE output is high, allowing us to visually read the binary value. This design makes the clock digital, with each counter representing one bit of a binary number—in this case, a 6-bit number, with the least significant bit on the right (FS0) and the most significant on the left (FS5). The binary value can be easily converted to decimal by reading the LEDs.
+The entire section consists of 12 counters and two reset counters. The first six counters, located at the bottom, convert the mains frequency into seconds. These counters are connected in series: the first receives a noise free mains frequency signal from the power supply at its pulse input; each of the remaining five counters is connected via the negated output of the previous counter to its own pulse input. Each counter also has an LED that lights up when its STATE output is high, allowing us to visually read the binary value. This design makes the clock digital, with each counter representing one bit of a binary number—in this case, a 6-bit number, with the least significant bit on the right (FS0) and the most significant on the left (FS5). The binary value can be easily converted to decimal by reading the LEDs.
 
 A 6-bit counter can represent 64 values (0 to 63), but we need it to count only up to the mains frequency (e.g., 50Hz) in order to generate a 1-second pulse at the final counter. To achieve this, a reset counter resets the six counters once they reach a specific value. For example, if we want the counters to reset after 49 (binary 110001), we must detect that exact value and then pull all the reset inputs of the six counters high on the next cycle. The simplest way to detect this number is by using an AND logic gate on all the outputs that should be high before the reset point. This charges a capacitor that will pull the transistor base low and reset the counters. This outputs low whenever the value is not the target, and high only when the exact reset value is reached.
 
-This reset method has a minor issue: due to transistor delays, the reset value might briefly appear for a few nanoseconds; the same goes for propagation delay. This is not visible to the naked eye but can be detected using a high-speed camera. The main advantage of this design is that the same reset logic can be used for all counters that need to reset at a specific value.
+This reset method has a minor issue: due to transistor delays, the reset value might briefly appear for a few nanoseconds; the same goes for propagation delay. This is not visible to the naked eye but can be detected using a high speed camera. The main advantage of this design is that the same reset logic can be used for all counters that need to reset at a specific value.
 
 The second group of six counters converts seconds into minutes. They function similarly to the first group but are fixed to reset after 59 (binary 111011). Technically, with a 50Hz mains frequency, all 12 counters could be linked and reset together at a count of 300. However, this would make it difficult to visually convert the binary seconds into decimal using the LEDs from S0 to S5.
 
@@ -63,7 +63,7 @@ The second group of six counters converts seconds into minutes. They function si
 
 The hours and minutes parts of the clock work similarly to the second counters, using the same method for resetting. The 24-hour digit has additional logic for resetting, but it still follows the same style as the other counter resets. Additionally, there is a block of logic called bus_enable which, when ENABLE is high, connects IN to OUT. OUT is then connected to the correct bit in a 4-bit bus.
 
-The bus is 4-bit and is used, with the help of a multiplexer and decoder, to convert each binary digit of the hours and minutes into decimal form for display. For simplicity, the bus uses an open-drain approach.
+The bus is 4-bit and is used, with the help of a multiplexer and decoder, to convert each binary digit of the hours and minutes into decimal form for display. For simplicity, the bus uses an open drain approach.
 
 There are also two increment counter logic circuits for setting the minutes and hours. They function in the same way as the counter PULSE.
 
@@ -71,7 +71,7 @@ There are also two increment counter logic circuits for setting the minutes and 
 
 This part of the circuit is responsible for resetting all the clock counters. It will also trigger a reset if the voltage drops too low for the clock to operate properly.
 
-When the clock is powered on, the flip-flop starts in the OFF state. It will remain OFF until the RESET button is pressed. Transistor Q122 ensures that once the button is pressed, the flip-flop stays in the OFF state even if the button is not released immediately. This allows the clock to be precisely reset, setting all counters to 0.
+When the clock is powered on, the flip flop starts in the OFF state. It will remain OFF until the RESET button is pressed. Transistor Q122 ensures that once the button is pressed, the flip flop stays in the OFF state even if the button is not released immediately. This allows the clock to be precisely reset, setting all counters to 0.
 
 LEDs act as dividers between numbers. They remain off when the clock is in a state that requires a reset.
 
@@ -129,7 +129,7 @@ There are multiple headers reserved for connecting optional add-ons or custom mo
 #### Bottom Header (J4 – 7 Pins)
 
 - **Pins 1–4:** A 4-bit bus, with the **least significant bit on the left**.  
-- **Pin 5:** A **reset-needed** signal, which goes high when the clock needs to be reset.  
+- **Pin 5:** A **reset needed** signal, which goes high when the clock needs to be reset.  
 - **Pin 6:** **Power (5 V)**.  
 - **Pin 7:** **Ground**.
 
@@ -147,9 +147,7 @@ There are multiple headers reserved for connecting optional add-ons or custom mo
 ![Clock Render](images/pcb.png)  
 *PCB*
 
-The PCB is green, two-layered, and 1.6 mm thick. All components, including the board, are RoHS-compliant and high quality. The back plate is made entirely of copper for shielding, except in areas with high voltage.
-
-#### Components List
+The PCB is green, two layered, and 1.6 mm thick. All components, including the board, are RoHS compliant and high quality. The back plate is made entirely of copper for shielding, except in areas with high voltage.
 
 #### Components List
 
