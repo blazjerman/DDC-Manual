@@ -8,6 +8,6 @@ minima:
     github: blazjerman
 
 header_pages:
-  - detailed.md
+  - overview.md
   - buy.md
   - pictures.md
