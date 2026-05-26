@@ -93,7 +93,6 @@ Pin headers J5 can be used to attach an external MCU or similar device to set th
 ---
 
 ## Connectivity / Add-ons
-## Connectivity / Add-ons
 
 The clock has several connector pin headers. You can refer to the pinout diagram in the [Overview](overview.md) to identify each pin.
 
