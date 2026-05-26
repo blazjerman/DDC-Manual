@@ -11,8 +11,6 @@ Tools -> CPU Frequency -> 80MHz
 Tools -> Flash Frequency -> 40MHz
 ```
 
-If upload or boot is unstable, return flash frequency to the board default.
-
 ## ESP32 pins
 
 | ESP32 pin | Use |
@@ -27,7 +25,7 @@ If upload or boot is unstable, return flash frequency to the board default.
 
 | J5 pin | Function | Connection |
 |---|---|---|
-| Pin 1 | Disable LEDs | Not used |
+| Pin 1 | Reset | Not used |
 | Pin 2 | Reset check / start | ESP32 GPIO 32 |
 | Pin 3 | 5V power | 5V supply only if safe |
 | Pin 4 | Carry bit for day | Not used |
@@ -39,12 +37,6 @@ If upload or boot is unstable, return flash frequency to the board default.
 
 Do **not** power the ESP32 from USB and also connect another 5V supply to the ESP32 5V pin at the same time.
 
-Use one of these:
-
-```text
-Option A: Clock has its own 5V supply, ESP32 uses USB, grounds connected.
-Option B: Clock and ESP32 share one good 5V supply, no USB power connected.
-```
 
 ## J5 Pin 2 reset/start wire
 
@@ -61,21 +53,11 @@ Below 0.7V = clock reset/off
 Above 0.7V = clock running
 ```
 
-The code treats below this as reset/off:
-
-```cpp
-const int CLOCK_RESET_THRESHOLD_MV = 700;
-```
-
 GPIO 32 is normally an analog input. At exact second `00`, ESP32 changes GPIO 32 to output HIGH to start the clock, then returns it to input mode.
-
-Warning: ESP32 pins are **not 5V tolerant**. Check J5 Pin 2 with a multimeter. If it can go above 3.3V, use a voltage divider/protection.
 
 ## Minute and hour setting transistors
 
-J5 Pin 5 and J5 Pin 6 are 5V clock inputs. Do **not** connect them directly to ESP32.
-
-Use one NPN transistor per pin.
+The hour and minute set pins are pulled up to **5V** on the clock board. The clock increments when these pins are pulled **LOW**, so they must be driven through an NPN transistor or another suitable level-shifting circuit. Do **not** connect these pins directly to the ESP32.
 
 ### Minutes
 
@@ -123,7 +105,7 @@ Connect to it and open:
 http://192.168.4.1
 ```
 
-Enter WiFi SSID, password, and timezone. ESP32 saves them and restarts.
+Enter WiFi SSID, password, and timezone. ESP32 saves them and restarts. You can check serial (bound rate 115200) for debugging.
 
 ## Startup sequence
 
@@ -139,7 +121,7 @@ Enter WiFi SSID, password, and timezone. ESP32 saves them and restarts.
 
 ## Troubleshooting
 
-If WiFi setup opens every boot, check Serial Monitor and GPIO 33 reset button wiring.
+If WiFi setup opens every boot, check Serial Monitor (bound rate 115200) and GPIO 33 reset button wiring.
 
 If the clock keeps resetting, check J5 Pin 2 voltage and `CLOCK_RESET_THRESHOLD_MV`.
 
