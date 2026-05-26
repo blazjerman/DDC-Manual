@@ -35,7 +35,7 @@ The power supply takes mains AC and converts it to a lower 6V using a transforme
 
 The transformer output is then rectified and regulated down to 5V using a low voltage drop down regulator. This regulator includes a comparator that compares a reference voltage from a 3V Zener diode to control the output. A BD140 transistor is used for voltage regulation. This transistor is rated to dissipate 1.25W without a heat sink; while a heat sink can be added, it is not required in this case.
 
-On the right side, there is a Schmitt trigger comparator that receives the mains frequency signal and filters out unwanted noise that may come from other devices on the same power network. There is also an LED indicator (marked "FS" frequency source on the board), which blinks at the mains frequency.
+On the bottom, there is a Schmitt trigger comparator that receives the mains frequency signal and filters out unwanted noise that may come from other devices on the same power network. There is also an LED indicator (marked "FS" frequency source on the board), which blinks at the mains frequency.
 
 
 ### Seconds
