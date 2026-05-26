@@ -107,6 +107,7 @@ This part is the biggest difference between this clock and other similar project
 
 This section provides a brief overview of the available expansion headers.
 There are multiple headers reserved for connecting optional add-ons or custom modules.
+Add-ons can be found in the [addons](https://github.com/blazjerman/DDC-Manual/tree/main/addons) folder.
 
 #### Top Header (J5 – 7 Pins)
 
