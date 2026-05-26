@@ -112,7 +112,7 @@ Add-ons can be found in the [addons](https://github.com/blazjerman/DDC-Manual/tr
 #### Top Header (J5 – 7 Pins)
 
 - **Pins 1:** Reset. 
-- **Pin 2:** Boot reset check/start. If the voltage is below 1V, it is in the boot reset state. To enable it, you can pull it high, and it will enable the clock and be above 1V. 
+- **Pin 2:** Boot reset check/start. If the voltage is below 0.7V, it is in the boot reset state. To enable it, you can pull it high, and it will enable the clock and be above 0.7V.
 - **Pin 3:** **Power (5 V)**.
 - **Pin 4:** Carry bit for day.
 - **Pin 5:** Set minutes.
