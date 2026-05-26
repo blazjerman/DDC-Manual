@@ -26,7 +26,7 @@ Tools -> Flash Frequency -> 40MHz
 | J5 pin | Function | Connection |
 |---|---|---|
 | Pin 1 | Reset | Not used |
-| Pin 2 | Reset check / start | ESP32 GPIO 32 |
+| Pin 2 | Boot reset check / start | ESP32 GPIO 32 |
 | Pin 3 | 5V power | 5V supply only if safe |
 | Pin 4 | Carry bit for day | Not used |
 | Pin 5 | Set minutes | NPN transistor collector |
