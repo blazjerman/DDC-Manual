@@ -69,11 +69,11 @@ There are also two increment counter logic circuits for setting the minutes and 
 
 ![Clock psu](images/hours_minutes_reset.png)
 
-This part of the circuit is responsible for resetting all the clock counters. It will also trigger a reset if the voltage drops too low for the clock to operate properly.
+This part of the circuit is responsible for resetting all the clock counters. It will also trigger a boot reset if the voltage drops too low for the clock to operate properly.
 
 When the clock is powered on, the flip flop starts in the OFF state. It will remain OFF until the RESET button is pressed. Transistor Q122 ensures that once the button is pressed, the flip flop stays in the OFF state even if the button is not released immediately. This allows the clock to be precisely reset, setting all counters to 0.
 
-LEDs act as dividers between numbers. They remain off when the clock is in a state that requires a reset.
+LEDs act as dividers between numbers. They remain off when the clock is in a state that requires a boot reset.
 
 ### Decoder
 
@@ -111,8 +111,8 @@ Add-ons can be found in the [addons](https://github.com/blazjerman/DDC-Manual/tr
 
 #### Top Header (J5 – 7 Pins)
 
-- **Pins 1:** Disable LEDs. 
-- **Pin 2:** Reset check/reset. If the voltage is below 1V, it is in the reset state. To enable it, you can pull it high, and it will enable the clock and be above 1V. 
+- **Pins 1:** Reset. 
+- **Pin 2:** Boot reset check/reset. If the voltage is below 1V, it is in the boot reset state. To enable it, you can pull it high, and it will enable the clock and be above 1V. 
 - **Pin 3:** **Power (5 V)**.
 - **Pin 4:** Carry bit for day.
 - **Pin 5:** Set minutes.
