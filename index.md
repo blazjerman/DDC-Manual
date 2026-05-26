@@ -93,6 +93,7 @@ Pin headers J5 can be used to attach an external MCU or similar device to set th
 ---
 
 ## Connectivity / Add-ons
+## Connectivity / Add-ons
 
 The clock has several connector pin headers. You can refer to the pinout diagram in the [Overview](overview.md) to identify each pin.
 
@@ -100,7 +101,8 @@ These connectors can be used to expand the clock’s functionality with features
 
 You can also connect the clock’s control pins to a microcontroller, such as an ESP32, so the clock can be automatically set every time it resets.
 
-Add-ons can be found in the [addons](addons/) folder.
+Add-ons can be found in the [addons](https://github.com/blazjerman/DDC-Manual/tree/main/addons) folder.
+
 ---
 
 ## More Pictures
