@@ -24,7 +24,7 @@ The clock board is divided into different chambers, each labeled by name and rep
 You can find the full schematic of the clock here:  
 [📄 View Clock Schematic (PDF)](/files/scheme.pdf)
 
-Below is a detailed description of each chamber.
+Below is a simple description of each chamber.
 
 
 ### Power Supply
