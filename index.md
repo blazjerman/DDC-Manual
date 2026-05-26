@@ -94,12 +94,13 @@ Pin headers J5 can be used to attach an external MCU or similar device to set th
 
 ## Connectivity / Add-ons
 
-The clock has several connectors pin headers. You can refer to the pinout diagram in the [Overview](overview.md) to identify each pin.
+The clock has several connector pin headers. You can refer to the pinout diagram in the [Overview](overview.md) to identify each pin.
 
-These connectors can also be used to expand the clock’s functionality with features such as an alarm, day/date/year display, stopwatch, and more.
+These connectors can be used to expand the clock’s functionality with features such as an alarm, day/date/year display, stopwatch, and more.
 
-You can also connect buttons to a microcontroller like an ESP32, so the clock can be automatically set up every time it resets.
+You can also connect the clock’s control pins to a microcontroller, such as an ESP32, so the clock can be automatically set every time it resets.
 
+Add-ons can be found in the [addons](addons/) folder.
 ---
 
 ## More Pictures
