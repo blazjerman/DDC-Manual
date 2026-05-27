@@ -4,14 +4,32 @@ This ESP32 add-on sets the clock automatically when the clock boots.
 
 On startup, the ESP32 connects to WiFi, gets the current time from NTP, turns WiFi off, and then uses the clock's J5 header to start and set the external clock.
 
-## Arduino IDE settings
+## Installation
 
-Recommended:
+1. Install ESP32 board support in Arduino IDE:
+   - Open **File -> Preferences**
+   - Add this URL to **Additional Boards Manager URLs**:
 
-```text
-Tools -> CPU Frequency -> 80MHz
-Tools -> Flash Frequency -> 40MHz
-```
+     ```text
+     https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+     ```
+
+   - Open **Tools -> Board -> Boards Manager**
+   - Search for **esp32**
+   - Install **esp32 by Espressif Systems**
+
+2. Open the project file:
+
+  ```text
+  DDC-Manual/addons/ddc_esp32_set_time_at_boot/ddc_esp32_set_time_at_boot.ino
+  ```
+
+3. Set frequency:
+  
+  ```text
+  Tools -> CPU Frequency -> 80MHz
+  Tools -> Flash Frequency -> 40MHz
+  ```
 
 ## ESP32 pins
 
