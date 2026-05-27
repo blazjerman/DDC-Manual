@@ -134,7 +134,7 @@ Add-ons can be found in the [addons](https://github.com/blazjerman/DDC-Manual/tr
 - **Pin 6:** **Power (5 V)**.  
 - **Pin 7:** **Ground**.
 
-#### Right Header – 7 Pins
+#### Right Header (J3 – 7 Pins)
 
 - **Pins 1–2:** A 2-bit binary value representing the current multiplexer state (i.e., which digit is selected).
 - **Pin 3:** Multiplexer pulse. If manual mode is enabled, it can be controlled externally by pulling it high for the off state and low for the high state.
