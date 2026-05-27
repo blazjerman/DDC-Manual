@@ -1,6 +1,8 @@
 # ESP32 WiFi Clock Setter
 
-This ESP32 gets time from WiFi/NTP, turns WiFi off, then uses the internal clock to start and set the external clock.
+This ESP32 add-on sets the clock automatically when the clock boots.
+
+On startup, the ESP32 connects to WiFi, gets the current time from NTP, turns WiFi off, and then uses the clock's J5 header to start and set the external clock.
 
 ## Arduino IDE settings
 
