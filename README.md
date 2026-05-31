@@ -1,13 +1,13 @@
 # DDC Manual – Project Overview
 
 
-📖 A web-based manual and documentation page for my **Discrete Digital Clock (DDC)** project.
+A web-based manual and documentation page for my **Discrete Digital Clock (DDC)** project.
 
-🔗 **Live Manual:** [blazjerman.github.io/DDC-Manual](https://blazjerman.github.io/DDC-Manual/)
+**Live Manual:** [blazjerman.github.io/DDC-Manual](https://blazjerman.github.io/DDC-Manual/)
 
 ---
 
-## 📖 About This Page
+## About This Page
 
 This page serves as the official manual and visual guide for the DDC — a custom-built discrete digital clock. The DDC Manual provides technical details, images, and schematics related to the project.
 
@@ -20,7 +20,7 @@ Here you can:
 
 ---
 
-## 📁 Repository Contents
+## Repository Contents
 
 This GitHub repository includes everything shown on the manual website:
 
@@ -36,7 +36,7 @@ This GitHub repository includes everything shown on the manual website:
 
 ---
 
-## 🖼️ Preview
+## Preview
 
 Here’s a quick look at the 3D render of the DDC design:
 
@@ -46,7 +46,7 @@ Here’s a quick look at the 3D render of the DDC design:
 
 ---
 
-## 🪪 License
+## License
 
 **DDC (Discrete Digital Clock) © 2025 Blaž Jerman**  
 Licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)
