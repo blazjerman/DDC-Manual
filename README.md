@@ -28,11 +28,11 @@ This GitHub repository includes everything shown on the manual website:
 - `/files/` – Contains useful documentation and project files like:
   - `DDC_Schematic.pdf` – The complete schematic of the clock.
   - `DDC_BOM.xlsx` – Bill of materials, if provided.
+  - `DDC.stl` – 3D file of clock.
 - `/images/` – Contains pictures and renderings of the DDC project:
   - Photos of the assembled clock.
   - PCB layout screenshots.
   - 3D model renders of the design.
-- `/css/` – Styling for the site (if used for custom layout).
 
 ---
 
