@@ -142,8 +142,5 @@ Enter WiFi SSID, password, and timezone. ESP32 saves them and restarts. You can 
 ## Troubleshooting
 
 If WiFi setup opens every boot, check Serial Monitor (bound rate 115200) and GPIO 33 reset button wiring.
-
-If the clock keeps resetting, check J5 Pin 2 voltage and `CLOCK_RESET_THRESHOLD_MV`.
-
 If hours/minutes do not increment, check NPN transistor wiring and common ground.
 
