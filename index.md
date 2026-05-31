@@ -110,7 +110,6 @@ There are several other discrete clock projects, but most of them use a differen
 
 | Project | Approximate component count | Notes |
 |---|---:|---|
-| [DDC - Discrete Digital Clock](https://blazjerman.github.io/DDC-Manual/) | 981 parts | Compact SMD design, single PCB, onboard power supply, visible binary counter LEDs |
 | [KABtronics Transistor Clock](https://www.transistor-clock.com/) | 1247 discrete components | 194 transistors, 566 diodes, 400 resistors, 87 capacitors; large THT kit |
 | [Mega Transistor Clock](https://mtc.mekweb.eu/) | 1630 parts | 596 diodes and 221 transistors; very large six-digit clock |
 | [Techno Logic Art “The Clock”](https://techno-logic-art.com/clock.htm) | 1916 parts | Artistic 3D hand-soldered construction, not PCB based |
