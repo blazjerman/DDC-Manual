@@ -104,6 +104,37 @@ Add-ons can be found in the [addons](https://github.com/blazjerman/DDC-Manual/tr
 
 ---
 
+## Similar Discrete Clock Projects
+
+There are several other discrete clock projects, but most of them use a different design philosophy. The DDC was designed to be compact, stable, self-contained, and practical, while still showing the internal logic of a clock built from individual components.
+
+| Project | Approximate component count | Notes |
+|---|---:|---|
+| [DDC - Discrete Digital Clock](https://blazjerman.github.io/DDC-Manual/) | 981 parts | Compact SMD design, single PCB, onboard power supply, visible binary counter LEDs |
+| [KABtronics Transistor Clock](https://www.transistor-clock.com/) | 1247 discrete components | 194 transistors, 566 diodes, 400 resistors, 87 capacitors; large THT kit |
+| [Mega Transistor Clock](https://mtc.mekweb.eu/) | 1630 parts | 596 diodes and 221 transistors; very large six-digit clock |
+| [Techno Logic Art “The Clock”](https://techno-logic-art.com/clock.htm) | 1916 parts | Artistic 3D hand-soldered construction, not PCB based |
+| [Transistor Logic Clock MkIII](https://transistorlogicclock.weebly.com/mkiii.html) | 1,440 discrete components | Very low-power transistor clock, but physically larger than the DDC |
+| [Ted Yapo’s Diode Clock](https://hackaday.io/project/11677-the-diode-clock) | 8000+ discrete components | Experimental diode-diode logic clock, much larger and more complex |
+| [Fernekes All Transistor Clock](https://www.fernekes.com/2020/04/all-transistor-clock/) | 600+ discrete components | Uses analog divider techniques and separate modules, more of an educational/art project |
+
+
+The main difference is size and integration. The DDC is much more compact than most similar clocks, and all required components are on a single PCB, including the transformer, fuse, power supply, logic, display drivers, controls, reset circuit, indicator LEDs, and display. Because the clock uses SMD components, the board can be assembled by machine, so no manual soldering is needed for the main PCB. Even with SMD parts, it still looks visually interesting because the logic layout, indicator LEDs, and display remain visible. Many other projects are larger, use separate modules, require more wiring, or need a large amount of hand soldering.
+
+Component count is also important. The DDC uses about 900 components, which is lower than many similar clocks. The KABtronics clock has over 1200 listed parts, Techno Logic Art’s clock has 1916 parts, and Ted Yapo’s Diode Clock has more than 8000 components. Fewer parts means less soldering, fewer possible failure points, easier troubleshooting, and a more practical final clock.
+
+The DDC uses SMD parts instead of through-hole parts. Through-hole parts are easier to see and look more “classic,” but they make the board much larger and require much more soldering. With SMD, the DDC can stay compact while still keeping the internal logic visible using indicator LEDs.
+
+Stability is another major difference. The DDC is stable because of its onboard power supply circuit, compact SMD layout, and stronger binary reset logic. The shorter PCB traces made possible by SMD components reduce unwanted noise pickup, stray capacitance, and interference compared with larger through-hole layouts. The reset circuit is also more robust than simpler reset approaches used in some other discrete clocks, which helps the counters return reliably to the correct state.
+
+The DDC can technically consume more power than very low power designs such as the Transistor Logic Clock MkIII, but most of that extra current is used by the indicator LEDs and the bright display. The indicator LEDs are driven at about 2 mA, and the 7-segment display segments are driven at about 15 mA. The logic itself consumes a similar amount of power to lower power transistor designs. Compared with very large discrete clocks, the DDC still needs only a fraction of the power.
+
+The Fernekes All Transistor Clock is different from the others because it uses analog divider techniques. This makes it very interesting as an educational design, but it is not expected to be as reliable or stable as fully digital counter based clocks. Analog divider circuits depend more on component tolerances, adjustment, and drift, while digital binary counters are more predictable.
+
+Overall, the DDC is not trying to be the largest, the most artistic, or the absolute lowest power discrete clock. It is designed as a balanced practical clock: compact, stable, self contained, bright, readable, easier to troubleshoot, and much smaller than most comparable fully discrete designs.
+
+---
+
 ## More Pictures
 
 Pictures can be found here: [Pictures](pictures.md)
