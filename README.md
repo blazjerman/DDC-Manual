@@ -1,7 +1,6 @@
 # DDC Manual – Project Overview
 
-Welcome! 👋  
-This is the GitHub repository for my **DDC Manual**:  
+
 📖 A web-based manual and documentation page for my **Discrete Digital Clock (DDC)** project.
 
 🔗 **Live Manual:** [blazjerman.github.io/DDC-Manual](https://blazjerman.github.io/DDC-Manual/)
