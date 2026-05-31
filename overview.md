@@ -182,5 +182,5 @@ The PCB is green, two layered, and 1.6 mm thick. All components, including the b
 | Transistor_SMD         | MMBT2907ALT1G      | Onsemi               | 23  |
 | Transistor_SMD         | MMBT3904LT1G       | Onsemi               | 113 |
 | Button_Switch_THT      | N_CLOSED           | -                    | 1   |
-| Screw_Terminal         | Screw_Terminal_01x02 | Ningbo Xinlaiya Elec | 1   |
-| Button_Switch_THT      | SW_Push            | Omron                | 4   |
+| Screw_Terminal         | Screw_Terminal_01x02 |                     | 1   |
+| Button_Switch_THT      | SW_Push            |                      | 4   |
