@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pictures
+title: Gallery
 permalink: /pictures/
 ---
 
