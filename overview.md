@@ -150,6 +150,11 @@ Pin numbering ends at the ground pin. On all headers, the ground pin is marked w
 ![Clock Render](images/pcb.png)  
 *PCB*
 
+The 3D model of the clock case is available below. It can be opened in an online 3D viewer or downloaded from GitHub.
+
+[View 3D model online](https://3dviewer.net/#model=https://raw.githubusercontent.com/blazjerman/DDC-Manual/main/files/DDC.3mf)  
+[Download 3MF model](files/DDC.3mf)
+
 The PCB is green, two layered, and 1.6 mm thick. All components, including the board, are RoHS compliant and high quality. The back plate is made entirely of copper for shielding, except in areas with high voltage.
 
 #### Components List
