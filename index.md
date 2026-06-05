@@ -134,6 +134,6 @@ Overall, the DDC is not trying to be the largest, the most artistic, or the abso
 
 ---
 
-## More Pictures
+## More Photos and Videos
 
-Pictures can be found here: [Pictures](pictures.md)
+More photos and videos can be found in the [Gallery](pictures.md).
