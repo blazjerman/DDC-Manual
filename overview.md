@@ -109,7 +109,7 @@ This section provides a brief overview of the available expansion headers.
 There are multiple headers reserved for connecting optional add-ons or custom modules.
 Add-ons can be found in the [addons](https://github.com/blazjerman/DDC-Manual/tree/main/addons) folder.
 
-Pin numbering starts at the ground pin. On all headers, this pin is marked with a square pad.
+Pin numbering ends at the ground pin. On all headers, the ground pin is marked with a square pad.
 
 #### Top Header (J5 – 7 Pins)
 
