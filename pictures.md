@@ -43,6 +43,7 @@ Close-up view of the multiplexer signal where it swiches.
 </video>
 
 Video showing the effect of adding an additional capacitor to the multiplexing signal to increase the delay.
+
 ---
 
 ### Power supply ripple
