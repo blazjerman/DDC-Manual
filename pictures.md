@@ -73,4 +73,4 @@ PWM signal when the display brightness is set to minimum.
   Your browser does not support the video tag.
 </video>
 
-This is ESP32 WiFi Clock Setter addon you can download code from [addons](https://github.com/blazjerman/DDC-Manual/tree/main/addons) folder.
+This is ESP32 WiFi Clock Setter addon you can download code from [addons](https://github.com/blazjerman/DDC-Manual/tree/main/addons) folder. ESP32 sets the clock time when it boots by using the additional headers, which act like the hour and minute increment buttons.
