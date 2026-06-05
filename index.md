@@ -137,3 +137,15 @@ Overall, the DDC is not trying to be the largest, the most artistic, or the abso
 ## More Photos and Videos
 
 More photos and videos can be found in the [Gallery](pictures.md).
+
+
+
+
+
+
+
+
+
+
+
+<script data-goatcounter="https://blaz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
