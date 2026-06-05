@@ -37,7 +37,7 @@ Signals M0, M1, M2, and M3 act as the power or enable outputs for the individual
 
 Close-up view of the multiplexer signal where it swiches.
 
-<video controls width="100%" preload="metadata">
+<video controls muted width="100%" preload="metadata">
   <source src="/DDC-Manual/images/multiplexing_additional_cap.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -68,7 +68,7 @@ PWM signal when the display brightness is set to minimum.
 
 ### ESP32 Wi-Fi clock setter
 
-<video controls width="100%" preload="metadata">
+<video controls muted width="100%" preload="metadata">
   <source src="/DDC-Manual/images/esp32_wifi_clock_setter.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
