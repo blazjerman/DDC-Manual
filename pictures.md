@@ -54,6 +54,15 @@ Oscilloscope capture showing ripple on the power supply during operation when al
 
 ---
 
+
+## Phase Margin Diagram
+
+![Phase margin diagram](images/psu_phase_margin.png)
+
+The linear drooper has a simulated phase margin of about **56°** at **200 mA**. It was tested from **0 mA to 500 mA** and remained stable across the full load range. The low-frequency loop gain is around **20 dB**, which is modest compared with common regulator ICs, but this circuit achieves it with only **six transistors** while keeping the dropout voltage low.
+
+---
+
 ### PWM brightness control
 
 ![PWM maximum brightness signal](images/pwm_max_brightness_signal.png)
