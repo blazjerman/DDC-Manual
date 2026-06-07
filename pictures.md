@@ -50,12 +50,12 @@ Video showing the effect of adding an additional capacitor to the multiplexing s
 
 ![Power supply ripple](images/psu_signal_ripple.png)
 
-Oscilloscope capture showing ripple on the power supply during operation when all digits are 0. This little oscilation hapenes when miltiplexer swiches.
+Oscilloscope capture showing ripple on the linear drooper output during operation when all digits are 0. This little oscilation hapenes when miltiplexer swiches.
 
 ---
 
 
-## Phase Margin Diagram
+### Power supply Phase Margin
 
 ![Phase margin diagram](images/psu_phase_margin.png)
 
