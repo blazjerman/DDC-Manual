@@ -3,8 +3,10 @@ layout: home
 title: Discrete Digital Clock Manual
 ---
 
+# Discrete Digital Clock
 
----
+![Discrete Digital Clock PCB](images/DDC.png)
+*The complete Discrete Digital Clock PCB, showing the display, counter LEDs, power supply, controls, and discrete logic.*
 
 ## Introduction
 
