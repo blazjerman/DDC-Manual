@@ -49,7 +49,7 @@ If you're using the mains powered version, you **must have a basic understanding
 
 You will need to provide your own power cable. Connect the cable to the **top right side** of the clock, where the power supply connector is located.
 
-The clock consumes a maximum of about **3 W** during normal operation.
+This version of the clock consumes a maximum of 3W from the mains supply.
 
 A **30 mA fuse** is included with the mains version for added protection.
 
