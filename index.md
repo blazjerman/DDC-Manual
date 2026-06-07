@@ -49,7 +49,9 @@ If you're using the mains powered version, you **must have a basic understanding
 
 You will need to provide your own power cable. Connect the cable to the **top right side** of the clock, where the power supply connector is located.
 
-A **30mA fuse** is included with the mains version for added protection.
+The clock consumes a maximum of about **3 W** during normal operation.
+
+A **30 mA fuse** is included with the mains version for added protection.
 
 ---
 
@@ -67,11 +69,17 @@ You also need to bridge the bottom jumpers in the minutes section to set the fre
 
 ### Size
 
-The PCB measures **243 × 155 mm** and features **M3 mounting holes** for easy installation in enclosures or setups.
+The PCB measures **243 × 155 mm** and features **M3 mounting holes** for easy installation in enclosures or setups. It also includes holes for mounting a 3D printed segment cover or diffuser to improve display readability.
 
 Below is a dimensioned drawing showing the main sizes of the PCB:
 
 ![Dimensioned Drawing of PCB](images/size.png)
+
+
+The 3D model of the clock case is available below. It can be opened in an online 3D viewer or downloaded from GitHub.
+
+[View 3D model online](https://3dviewer.net/#model=https://raw.githubusercontent.com/blazjerman/DDC-Manual/main/files/DDC.3mf)  
+[Download 3MF model](files/DDC.3mf)
 
 ---
 
