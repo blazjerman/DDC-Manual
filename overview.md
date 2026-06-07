@@ -155,7 +155,7 @@ The 3D model of the clock case is available below. It can be opened in an online
 [View 3D model online](https://3dviewer.net/#model=https://raw.githubusercontent.com/blazjerman/DDC-Manual/main/files/DDC.3mf)  
 [Download 3MF model](files/DDC.3mf)
 
-The PCB is green, two layered, and 1.6 mm thick. All components, including the board, are RoHS compliant and high quality. The back plate is made entirely of copper for shielding, except in areas with high voltage.
+The PCB is green, two layered, and 1.6 mm thick. All components, including the board, are RoHS compliant and high quality. Both sides have a GND copper pour for shielding, except in high voltage areas.
 
 #### Components List
 
