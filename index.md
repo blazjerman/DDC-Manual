@@ -113,14 +113,14 @@ There are several other discrete clock projects, but most of them use a differen
 | [KABtronics Transistor Clock](https://www.transistor-clock.com/) | 1247 discrete components | 194 transistors, 566 diodes, 400 resistors, 87 capacitors; large THT kit |
 | [Mega Transistor Clock](https://mtc.mekweb.eu/) | 1630 parts | 596 diodes and 221 transistors; very large six-digit clock |
 | [Techno Logic Art “The Clock”](https://techno-logic-art.com/clock.htm) | 1916 parts | Artistic 3D hand-soldered construction, not PCB based |
-| [Transistor Logic Clock MkIII](https://transistorlogicclock.weebly.com/mkiii.html) | 1,440 discrete components | Very low-power transistor clock, but physically larger than the DDC |
-| [Ted Yapo’s Diode Clock](https://hackaday.io/project/11677-the-diode-clock) | 8000+ discrete components | Experimental diode-diode logic clock, much larger and more complex |
+| [Transistor Logic Clock MkIII](https://transistorlogicclock.weebly.com/mkiii.html) | 1,440 discrete components | Very low-power transistor clock |
+| [Ted Yapo’s Diode Clock](https://hackaday.io/project/11677-the-diode-clock) | 8000+ discrete components | Diode-diode logic clock, much larger and more complex |
 | [Fernekes All Transistor Clock](https://www.fernekes.com/2020/04/all-transistor-clock/) | 600+ discrete components | Uses analog divider techniques and separate modules, more of an educational/art project |
 
 
 The main difference is size and integration. The DDC is much more compact than most similar clocks, and all required components are on a single PCB, including the transformer, fuse, power supply, logic, display drivers, controls, reset circuit, indicator LEDs, and display. Because the clock uses SMD components, the board can be assembled by machine, so no manual soldering is needed for the main PCB. Even with SMD parts, it still looks visually interesting because the logic layout, indicator LEDs, and display remain visible. Many other projects are larger, use separate modules, require more wiring, or need a large amount of hand soldering.
 
-Component count is also important. The DDC uses about 900 components, which is lower than many similar clocks. The KABtronics clock has over 1200 listed parts, Techno Logic Art’s clock has 1916 parts, and Ted Yapo’s Diode Clock has more than 8000 components. Fewer parts means less soldering, fewer possible failure points, easier troubleshooting, and a more practical final clock.
+Component count is also important. The DDC uses about 900 components, which is fewer than many similar clocks. Without indicator LEDs and overkill protection diodes, it has fewer than 700 components. The KABtronics clock has over 1,200 listed parts, Techno Logic Art’s clock has 1,916 parts, and Ted Yapo’s Diode Clock has more than 8,000 components.
 
 The DDC uses SMD parts instead of through-hole parts. Through-hole parts are easier to see and look more “classic,” but they make the board much larger and require much more soldering. With SMD, the DDC can stay compact while still keeping the internal logic visible using indicator LEDs.
 
