@@ -701,33 +701,14 @@ void handleClockSetRequest() {
   setClockAfterZeroSecond();
 }
 
-void setLowPowerRuntimeStart() {
-  printDivider();
-  Serial.println("[POWER] Setting low-power runtime mode at startup...");
 
-  Serial.print("[POWER] CPU frequency before: ");
-  Serial.print(getCpuFrequencyMhz());
-  Serial.println(" MHz");
 
-  // Try 80 first. If stable, you can test 40.
-  bool ok = setCpuFrequencyMhz(80);
 
-  if (ok) {
-    Serial.println("[POWER] CPU frequency changed successfully");
-  } else {
-    Serial.println("[POWER] CPU frequency change failed");
-  }
 
-  Serial.print("[POWER] CPU frequency now: ");
-  Serial.print(getCpuFrequencyMhz());
-  Serial.println(" MHz");
 
-  Serial.print("[POWER] Running on core: ");
-  Serial.println(xPortGetCoreID());
 
-  Serial.println("[POWER] Memory/flash frequency cannot normally be changed safely at runtime in Arduino");
-  Serial.println("[POWER] Second core cannot be fully disabled safely from normal Arduino sketch code");
-}
+
+
 
 void setup() {
 
